@@ -382,7 +382,7 @@ After each full pass, the largest element "bubbles up" to its correct position.
 
 It's like repeatedly passing through the list, pushing the biggest element to the end.
 
-```
+```python
 def bubble_sort(arr):
     n = len(arr)
     for i in range(n):
@@ -418,7 +418,7 @@ Concept:
 
 It's like selecting the minimum and moving it to its correct place.
 
-```
+```python
 def selection_sort(arr):
     n = len(arr)
     for i in range(n):
@@ -452,7 +452,7 @@ Concept:
 3. Insert it into the correct place in the sorted left part.
 
 So, at each step, the left part is always sorted!
-```
+```python
 def insertion_sort(arr):
     n = len(arr)
     for i in range(1, n):
@@ -487,7 +487,7 @@ Steps:
 1. Divide the array into halves until you cannot divide anymore (single elements).
 2. Merge two sorted halves into one sorted array.
 
-```
+```python
 def merge_sort(arr):
     if len(arr) <= 1:
         return arr
@@ -547,7 +547,7 @@ Recursively sort left and right parts.
 
 In short: Pick a pivot → put it in right place → sort smaller parts.
 
-```
+```python
 def quick_sort(arr):
     if len(arr) <= 1:
         return arr
