@@ -14,11 +14,9 @@
 
 ## 🫧 Bubble Sort
 Concept:
-Repeatedly swap adjacent elements if they are in the wrong order.
-
-After each full pass, the largest element "bubbles up" to its correct position.
-
-It's like repeatedly passing through the list, pushing the biggest element to the end.
+1) Repeatedly swap adjacent elements if they are in the wrong order.
+2) After each full pass, the largest element "bubbles up" to its correct position.
+3) It's like repeatedly passing through the list, pushing the biggest element to the end.
 
 ```python
 def bubble_sort(arr):
@@ -173,15 +171,11 @@ Worst Case	O(n log n)
 🎯 Concept:
 Divide and Conquer (just like Merge Sort).
 
-Choose a pivot (one element).
-
-Partition array:
-
-Elements smaller than pivot → left
-
-Elements bigger than pivot → right
-
-Recursively sort left and right parts.
+1) Choose a pivot (one element).
+2) Partition array:
+   a) Elements smaller than pivot → left
+   b) Elements bigger than pivot → right
+3) Recursively sort left and right parts.
 
 In short: Pick a pivot → put it in right place → sort smaller parts.
 
