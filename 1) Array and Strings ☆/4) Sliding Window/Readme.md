@@ -1,4 +1,4 @@
-# 🧠 Array/String Sliding Window Technique
+# 🧠 Sliding Window Technique
 
 1) subarray problem
 2) find min/max within a window
