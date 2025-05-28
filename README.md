@@ -947,6 +947,51 @@ Output:
 
 ## Square of Diagonal Elements
 
+To compute the **square of diagonal elements** in a matrix, we can break it down into a few steps:
+
+Problem Statement:
+Given an `n x n` matrix, find the **sum of squares of all elements on the primary diagonal**.
+
+✅ Primary Diagonal Only
+
+Example:
+```python
+[
+ [1, 2, 3],
+ [4, 5, 6],
+ [7, 8, 9]
+]
+```
+
+Primary diagonal: `1, 5, 9` → Squares: `1, 25, 81` → Sum: `107`
+
+```python
+def square_of_primary_diagonal(matrix):
+    total = 0
+    for i in range(len(matrix)):
+        total += matrix[i][i] ** 2
+    return total
+```
+
+✅ Both Diagonals
+
+If you want **squares of both diagonals**, and to avoid double-counting the center (in odd-sized matrices):
+
+```python
+def square_of_both_diagonals(matrix):
+    n = len(matrix)
+    total = 0
+    for i in range(n):
+        total += matrix[i][i] ** 2  # Primary diagonal
+        total += matrix[i][n - i - 1] ** 2  # Secondary diagonal
+    
+    if n % 2 == 1:
+        center = matrix[n // 2][n // 2]
+        total -= center ** 2  # Center was added twice
+
+    return total
+```
+
 ---
 
 ## Magic Square
