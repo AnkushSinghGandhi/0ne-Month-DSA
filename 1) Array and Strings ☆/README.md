@@ -280,9 +280,10 @@ Concept:
 
 ---
 
-## 🔢 Easy Level Questions
+## LeetCode 26 — Remove Duplicates from Sorted Array  
+⭐ Idea: Slow/fast pointers: i keeps track of unique placement, j scans through array.
+⭐ Tip: When nums[i] != nums[j], we found a new unique — overwrite it.
 
-### LeetCode 26 — Remove Duplicates from Sorted Array  
 **Problem:** Remove duplicates in-place so each unique element appears once. Return new length.  
 **Example:**
 ```python
@@ -305,7 +306,10 @@ def removeDuplicates(nums):
 
 ---
 
-### LeetCode 27 — Remove Element  
+## LeetCode 27 — Remove Element  
+⭐ Idea: Use a slow pointer i to rewrite non-val elements.
+⭐ Tip: It’s like a "filter" — only keep non-val elements.
+
 **Problem:** Remove all instances of `val` in-place and return new length.  
 **Example:**
 ```python
@@ -326,7 +330,10 @@ def removeElement(nums, val):
 
 ---
 
-### LeetCode 283 — Move Zeroes  
+## LeetCode 283 — Move Zeroes  
+⭐ Idea: Move non-zero to front using slow pointer i, swap when needed.
+⭐ Tip: Think: "shift non-zero to left" — zeros automatically pile to the right.
+
 **Problem:** Move all `0`’s to the end while maintaining relative order of non-zero elements.  
 **Example:**
 ```python
@@ -346,7 +353,10 @@ def moveZeroes(nums):
 
 ---
 
-### LeetCode 344 — Reverse String  
+## LeetCode 344 — Reverse String  
+⭐ Idea: Use two pointers from both ends and swap.
+⭐ Tip: Classic reversal — shrink window from both ends.
+
 **Problem:** Reverse an array of characters in-place.  
 **Example:**
 ```python
@@ -366,7 +376,10 @@ def reverseString(s):
 
 ---
 
-### LeetCode 125 — Valid Palindrome  
+## LeetCode 125 — Valid Palindrome  
+⭐ Idea: Two pointers from both ends skipping non-alphanumerics.
+⭐  Tip: Think of “sanitized string” + compare characters ignoring case.
+
 **Problem:** Check if, after lowercasing and removing non-alphanumeric chars, a string reads the same backward.  
 **Example:**
 ```python
@@ -394,7 +407,10 @@ def isPalindrome(s):
 
 ---
 
-### LeetCode 977 — Squares of a Sorted Array  
+## LeetCode 977 — Squares of a Sorted Array  
+⭐ Idea: Largest square will be at ends, so use two pointers and fill result from the back.
+⭐ Tip: Squared values mess up order → fill result in reverse!
+
 **Problem:** Given a sorted array, return a new sorted array of the squares.  
 **Example:**
 ```python
@@ -420,7 +436,10 @@ def sortedSquares(nums):
 
 ---
 
-### LeetCode 680 — Valid Palindrome II  
+## LeetCode 680 — Valid Palindrome II  
+⭐ Idea: Two pointers — if mismatch, skip either left or right and retry.
+⭐ Tip: Allow one “mistake” and try both possible skips.
+
 **Problem:** You may delete at most one character to make a string a palindrome. Return `True` if possible.  
 **Example:**
 ```python
@@ -450,7 +469,10 @@ def validPalindrome(s):
 
 ---
 
-### Remove All Elements Greater than a Threshold  
+## Remove All Elements Greater than a Threshold  
+⭐ Idea: Use a slow pointer to rewrite elements ≤ threshold.
+⭐ Tip: Similar to “filter” idea again — include if ≤ threshold.
+
 **Problem:** Remove all elements in `nums` greater than a given threshold value.  
 **Example:**
 ```python
@@ -460,13 +482,20 @@ Output: [1,3,5,2]
 **Solution Placeholder:**
 ```python
 def removeGreater(nums, threshold):
-    # TODO: implement in-place removal
-    pass
+    i = 0
+    for j in range(len(nums)):
+        if nums[j] <= threshold:
+            nums[i] = nums[j]
+            i += 1
+    return nums[:i]
 ```
 
 ---
 
-### Skip More Than Two Duplicates  
+## Skip More Than Two Duplicates  
+⭐ Idea: Two pointers; compare current with nums[i-2] to allow max 2 duplicates.
+⭐ Tip: “At most k duplicates” → compare with i - k.
+
 **Problem:** Given a sorted array, keep each unique element at most twice, remove extras in-place.  
 **Example:**
 ```python
@@ -482,123 +511,6 @@ def removeDuplicatesII(nums):
 
 ---
 
-## 🔥 Medium Level Questions
-
-### LeetCode 11 — Container With Most Water  
-*(Solved above)*
-
-### LeetCode 15 — 3Sum  
-*(Solved above)*
-
-### LeetCode 167 — Two Sum II – Input Array Is Sorted  
-**Problem:** 1-indexed sorted array, find two numbers that add up to target.  
-**Example:**
-```python
-Input: numbers = [2,7,11,15], target = 9
-Output: [1,2]
-```
-**Solution:**
-```python
-def twoSumII(numbers, target):
-    i, j = 0, len(numbers) - 1
-    while i < j:
-        s = numbers[i] + numbers[j]
-        if s == target:
-            return [i+1, j+1]
-        elif s < target:
-            i += 1
-        else:
-            j -= 1
-```
-
----
-
-### LeetCode 75 — Sort Colors  
-**Problem:** Sort array of 0s,1s,2s in-place (Dutch National Flag).  
-**Example:**
-```python
-Input: [2,0,2,1,1,0]
-Output: [0,0,1,1,2,2]
-```
-**Solution:**
-```python
-def sortColors(nums):
-    low, mid, high = 0, 0, len(nums) - 1
-    while mid <= high:
-        if nums[mid] == 0:
-            nums[low], nums[mid] = nums[mid], nums[low]
-            low += 1
-            mid += 1
-        elif nums[mid] == 1:
-            mid += 1
-        else:
-            nums[mid], nums[high] = nums[high], nums[mid]
-            high -= 1
-```
-
----
-
-### LeetCode 209 — Minimum Size Subarray Sum  
-**Problem:** Smallest length of contiguous subarray with sum ≥ target.  
-**Example:**
-```python
-Input: target = 7, nums = [2,3,1,2,4,3]
-Output: 2  # [4,3]
-```
-**Solution Placeholder:**
-```python
-def minSubArrayLen(target, nums):
-    # TODO: implement sliding window
-    pass
-```
-
----
-
-### LeetCode 438 — Find All Anagrams in a String  
-**Problem:** Find start indices of p's anagrams in s.  
-**Example:**
-```python
-Input: s = "cbaebabacd", p = "abc"
-Output: [0,6]
-```
-**Solution Placeholder:**
-```python
-def findAnagrams(s, p):
-    # TODO: implement sliding window + frequency map
-    pass
-```
-
----
-
-### LeetCode 713 — Subarray Product Less Than K  
-**Problem:** Number of contiguous subarrays where product < k.  
-**Example:**
-```python
-Input: nums = [10,5,2,6], k = 100
-Output: 8
-```
-**Solution Placeholder:**
-```python
-def numSubarrayProductLessThanK(nums, k):
-    # TODO: implement two-pointer sliding window
-    pass
-```
-
----
-
-### LeetCode 658 — Find K Closest Elements  
-**Problem:** Return k closest elements to x in sorted array.  
-**Example:**
-```python
-Input: arr = [1,2,3,4,5], k = 4, x = 3
-Output: [1,2,3,4]
-```
-**Solution Placeholder:**
-```python
-def findClosestElements(arr, k, x):
-    # TODO: implement two-pointer or binary search
-    pass
-```
 # 🧠 Array/String Sliding Window Technique
 
 1) subarray problem
