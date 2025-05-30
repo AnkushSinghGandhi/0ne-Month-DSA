@@ -1,8 +1,8 @@
 # 🧠 Two Pointers
 Concept:
-Sliding Window is a technique for reducing nested loops to linear time when we need to examine subsets of a sequence.
-Instead of re-evaluating every subarray or substring from scratch, we "slide" a window across the input, adding the next element and removing the previous.
+The Two Pointer technique is a powerful and versatile approach used in many array and string problems to reduce time complexity, especially when dealing with sorted data, pairs, or subarrays.
 
+Two Pointers is used for:
 1) This is a super versatile pattern, often used for:
 2) Palindromes
 3) Reversing
