@@ -1,9 +1,7 @@
 # 🧠 Sliding Window Technique
-
-1) subarray problem
-2) find min/max within a window
-
 Concept:
+Sliding Window is a technique for reducing nested loops to linear time when we need to examine subsets of a sequence.
+Instead of re-evaluating every subarray or substring from scratch, we "slide" a window across the input, adding the next element and removing the previous.
 
 Sliding Window is used for:
 1) Longest/shortest substring or subarray with a condition.
