@@ -1,4 +1,4 @@
-# 🚀 15-30 Days DSA Roadmap to Crack ₹10–13 LPA Offers
+# 🚀 15-30 Days DSA Roadmap to Crack ₹10–15 LPA Offers
 
 If you’re short on time but aiming for solid product-based or top startup roles, this roadmap helps you focus on the **most important DSA topics** that give maximum ROI in interviews.
 
@@ -16,6 +16,10 @@ If you’re short on time but aiming for solid product-based or top startup role
 - Prefix sums
 - Sliding Window (min/max in window)
 - Two-pointer technique
+- String Operations
+  - Substring
+  - Palindromes
+  - Anagrams
 - Binary search and its variations:
   - Classic binary search
   - First/Last occurrence
