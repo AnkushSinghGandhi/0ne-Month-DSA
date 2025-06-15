@@ -112,6 +112,15 @@ If you’re short on time but aiming for solid product-based or top startup role
 | 14     | DP – Do 2–3 classic problems |
 | 15     | Mock interviews / Timed practice sets |
 
+## 🎯 Questions to practice no just memorize them.....
+**[LeetCode 75 Study Plan](https://leetcode.com/studyplan/leetcode-75/)**.
+
+### Why LeetCode 75?
+
+- It's a **curated set of 75 essential problems** used by top tech companies.
+- Covers core DSA patterns with increasing difficulty.
+- Helps solidify your concepts and prepare you for real-world interview problems.
+
 ---
 
 ## 🧠 Final Tips
