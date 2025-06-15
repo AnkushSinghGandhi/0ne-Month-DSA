@@ -6,7 +6,7 @@ If you’re short on time but aiming for solid product-based or top startup role
 
 ## ✅ Priority-Based Topic Breakdown
 
-### 🔥 Tier 1: Must-Do (Days 1–7)
+### 🔥 Tier 1: Must-Do 
 
 > **These are asked in almost every interview** – master them first.
 
@@ -50,7 +50,7 @@ If you’re short on time but aiming for solid product-based or top startup role
 
 ---
 
-### ⚡ Tier 2: Medium Priority (Days 8–12)
+### ⚡ Tier 2: Medium Priority
 
 > Do these next. They're common but not always core.
 
@@ -80,7 +80,7 @@ If you’re short on time but aiming for solid product-based or top startup role
 
 ---
 
-### 🧊 Tier 3: Optional (Days 13–15)
+### 🧊 Tier 3: Optional 
 
 > Only if you have time or the company asks for these topics.
 
@@ -96,21 +96,6 @@ If you’re short on time but aiming for solid product-based or top startup role
 - Longest Common Subsequence
 
 ---
-
-## 🗓️ Suggested 15-Day Plan
-
-| Day(s) | Topics |
-|--------|--------|
-| 1–3    | Arrays + Binary Search + Sliding Window + Two-pointer |
-| 4–5    | Hashing (HashMap/Set problems) |
-| 6–7    | Singly Linked List + Stack/Queue problems |
-| 8–9    | Trees (traversals + BST check + height) |
-| 10     | Recursion & Backtracking basics |
-| 11     | Heaps + 2–3 Greedy problems |
-| 12     | Revise Arrays/LL/Hashing + Problem practice |
-| 13     | Graphs (DFS, BFS, cycle detection) |
-| 14     | DP – Do 2–3 classic problems |
-| 15     | Mock interviews / Timed practice sets |
 
 ## 🎯 Questions to practice no just memorize them.....
 **[LeetCode 75 Study Plan](https://leetcode.com/studyplan/leetcode-75/)**.
